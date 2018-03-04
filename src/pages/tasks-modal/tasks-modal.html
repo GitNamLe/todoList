@@ -1,0 +1,32 @@
+<!--
+  Generated template for the TasksModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>tasksModal</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form #f="ngForm" (ngSubmit)="onDismiss(f)">
+        <ion-item no-margin>
+          <ion-textarea
+          style="height: 80vh;"
+          type="string"
+          name="task" 
+          value="your momma"
+          placeholder="task"
+          ngModel></ion-textarea>
+      </ion-item>
+      <button
+      ion-button
+      type="submit"
+      block>Save Notes</button>
+  </form> 
+</ion-content>

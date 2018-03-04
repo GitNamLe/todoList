@@ -1,0 +1,52 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons>
+      <button ion-button icon-only (click)="onCancelDismiss()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form #f="ngForm" (ngSubmit)="onDismiss(f)">
+      <ion-list>
+          <ion-item>
+              <ion-label floating>Hours</ion-label>
+              <ion-input
+              type="number"
+              name="hours"
+              min="0" max="99"
+              required
+              ngModel></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Minutes</ion-label>
+            <ion-input
+            type="number"
+            name="minutes"
+            min="0" max="59"
+            required
+            ngModel></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Seconds</ion-label>
+          <ion-input
+          type="number"
+          name="seconds"
+          min="0" max="59"
+          required          
+          ngModel></ion-input>
+      </ion-item>
+      </ion-list>
+      <button
+      ion-button
+      type="submit"
+      block
+      [disabled]="!f.valid">ChangeTime</button>
+  </form>   
+</ion-content>
+    

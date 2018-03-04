@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="text-align:center;">Timer</ion-title>
+  </ion-navbar>
+</ion-header>
+  
+  
+  <ion-content padding>
+    <ion-list>
+      <ion-item (click)="onTimerChange()">
+        <!-- <h3>{{ hours }}:{{ minutes }}:{{ seconds }}</h3> -->
+        <h3 style="font-size: 4.0rem; text-align: center;">{{ clock }}</h3>
+      </ion-item>
+      <ion-item>
+        <ion-buttons>
+          <button ion-button block (click)="onStart()">{{ startpause }}</button>
+          <button ion-button block (click)="onReset()">Reset</button>
+        </ion-buttons>
+      </ion-item>
+    </ion-list>
+  </ion-content>
